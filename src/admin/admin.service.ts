@@ -33,12 +33,12 @@ export class AdminService {
     const [accessToken, refreshToken] = await Promise.all([
       // Signing access token with specified expiration and secret key
       this.jwtService.signAsync(payload, {
-        secret: process.env.ACCESS_TOKEN_KEY,
+        secret: process.env.ACCESS_TOKEN_KEY+"admin",
         expiresIn: process.env.ACCESS_TOKEN_TIME,
       }),
       // Signing refresh token with specified expiration and secret key
       this.jwtService.signAsync(payload, {
-        secret: process.env.REFRESH_TOKEN_KEY,
+        secret: process.env.REFRESH_TOKEN_KEY+"admin",
         expiresIn: process.env.REFRESH_TOKEN_TIME,
       }),
     ]);
