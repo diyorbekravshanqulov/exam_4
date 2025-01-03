@@ -38,7 +38,7 @@ async function start() {
     await app.listen(PORT);
 
     // Log server start message
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}/docs`);
   } catch (error) {
     // Log any errors that occur during server startup
     console.error('Error starting server:', error); 
